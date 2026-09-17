@@ -1,0 +1,16 @@
+{
+ "read_file": "# Project\n\nSample project scaffold used for local testing and tooling.\n\nSee CHANGELOG.md for release history and VERSION.md for the current version.\n",
+ "read_text_file": "beta",
+ "read_media_file": "{\"mimeType\":\"image/png\",\"data\":\"iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=\"}",
+ "read_multiple_files": "README.md:\n# Project\n\nSample project scaffold used for local testing and tooling.\n\n---\n\nVERSION.md:\nbeta\n\n---\n\nCHANGELOG.md:\n## Unreleased\n- Initial changelog entry\n",
+ "write_file": "Successfully wrote to /tmp/project/CHANGELOG.md",
+ "edit_file": "```diff\n--- a/VERSION.md\n+++ b/VERSION.md\n@@ -1 +1 @@\n-beta\n+beta-2\n```",
+ "create_directory": "Successfully created directory /tmp/project/scripts",
+ "list_directory": "[FILE] README.md\n[FILE] VERSION.md\n[FILE] CHANGELOG.md\n[FILE] old_notes.txt\n[FILE] config.yaml",
+ "list_directory_with_sizes": "[FILE] README.md          142 B\n[FILE] VERSION.md            5 B\n[FILE] CHANGELOG.md        310 B\n[FILE] old_notes.txt       891 B\n[FILE] config.yaml         204 B\n\nTotal: 5 files, 1552 bytes",
+ "directory_tree": "[\n  {\"name\": \"README.md\", \"type\": \"file\"},\n  {\"name\": \"VERSION.md\", \"type\": \"file\"},\n  {\"name\": \"CHANGELOG.md\", \"type\": \"file\"},\n  {\"name\": \"old_notes.txt\", \"type\": \"file\"},\n  {\"name\": \"config.yaml\", \"type\": \"file\"}\n]",
+ "move_file": "Successfully moved /tmp/project/old_notes.txt to /tmp/project/archive/old_notes.txt",
+ "search_files": "/tmp/project/README.md\n/tmp/project/CHANGELOG.md\n/tmp/project/VERSION.md",
+ "get_file_info": "size: 5 B\ncreated: 2026-09-10T14:22:03Z\nmodified: 2026-09-15T09:47:11Z\naccessed: 2026-09-16T08:03:00Z\nisDirectory: false\nisFile: true\npermissions: 644",
+ "list_allowed_directories": "/tmp/project"
+}

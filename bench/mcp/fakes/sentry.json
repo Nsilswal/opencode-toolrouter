@@ -1,0 +1,11 @@
+{
+ "find_organizations": "{\"organizations\":[{\"id\":\"4507000000000\",\"slug\":\"acme\",\"name\":\"acme\"}]}",
+ "find_projects": "{\"organization\":\"acme\",\"projects\":[{\"id\":\"4507111111111\",\"slug\":\"web\",\"name\":\"web\",\"platform\":\"javascript-react\"}]}",
+ "update_issue": "{\"id\":\"3F2\",\"shortId\":\"WEB-3F2\",\"status\":\"resolved\",\"assignedTo\":null,\"permalink\":\"https://acme.sentry.io/issues/WEB-3F2/\"}",
+ "search_events": "{\"query\":\"count of errors in web (24h)\",\"result\":[{\"count()\":187}],\"meta\":{\"dataset\":\"errors\"}}",
+ "analyze_issue_with_seer": "Seer analysis for WEB-3F2: TypeError occurs in src/components/InvoiceTable.tsx:42 where `rows` is undefined before the API response resolves. Root cause: missing null-check after async fetch in useEffect. Suggested fix: initialize state with `[]` and guard render with `rows?.length`. Confidence: high.",
+ "search_issues": "{\"issues\":[{\"id\":\"3F2\",\"shortId\":\"WEB-3F2\",\"title\":\"TypeError: cannot read properties of undefined\",\"culprit\":\"InvoiceTable.render\",\"status\":\"unresolved\",\"level\":\"error\",\"count\":187,\"project\":\"web\"}]}",
+ "get_sentry_resource": "{\"type\":\"issue\",\"shortId\":\"WEB-3F2\",\"title\":\"TypeError: cannot read properties of undefined (reading 'length')\",\"status\":\"unresolved\",\"firstSeen\":\"2026-09-10T14:22:00Z\",\"lastSeen\":\"2026-09-16T09:03:11Z\",\"count\":187,\"project\":\"web\",\"permalink\":\"https://acme.sentry.io/issues/WEB-3F2/\"}",
+ "search_sentry_tools": "{\"results\":[{\"name\":\"list_issue_events\",\"description\":\"List events belonging to a specific Sentry issue.\"},{\"name\":\"create_project\",\"description\":\"Create a new project within a Sentry organization.\"}]}",
+ "execute_sentry_tool": "{\"events\":[{\"id\":\"a1b2c3d4e5f6\",\"timestamp\":\"2026-09-16T09:03:11Z\",\"message\":\"TypeError: cannot read properties of undefined (reading 'length')\",\"user\":\"session_9182\"}]}"
+}

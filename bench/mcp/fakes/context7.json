@@ -1,0 +1,4 @@
+{
+ "resolve-library-id": "Matched libraries:\n1. /vercel/next.js \u2014 Next.js (React framework, App Router, SSR/SSG) \u2014 Trust Score: 10 \u2014 3,412 code snippets\n2. /jd/tenacity \u2014 tenacity (Python general-purpose retrying library) \u2014 Trust Score: 8.9 \u2014 214 code snippets\n3. /vercel/next.js-learn \u2014 Next.js interactive learning course examples \u2014 Trust Score: 7.2 \u2014 156 code snippets",
+ "query-docs": "Source: /vercel/next.js (App Router)\n\nRoute Handlers can read cookies via `next/headers`:\n\n```ts\nimport { cookies } from 'next/headers'\n\nexport async function GET() {\n  const cookieStore = cookies()\n  const token = cookieStore.get('session')\n  return Response.json({ token })\n}\n```\n\nUse `NextResponse` for redirects and setting cookies on the response object."
+}

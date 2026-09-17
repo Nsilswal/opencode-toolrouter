@@ -1,0 +1,14 @@
+{
+ "git_status": "On branch main\nChanges not staged for commit:\n  (use \"git add <file>...\" to update what will be committed)\n\tmodified:   VERSION.md\n\nUntracked files:\n  (use \"git add <file>...\" to include in what will be committed)\n\told_notes.txt\n\nno changes added to commit (use \"git add\" and/or \"git commit -a\")",
+ "git_diff_unstaged": "diff --git a/VERSION.md b/VERSION.md\nindex 3f2a1c9..8b7e2d4 100644\n--- a/VERSION.md\n+++ b/VERSION.md\n@@ -1 +1 @@\n-beta\n+beta.1",
+ "git_diff_staged": "diff --git a/CHANGELOG.md b/CHANGELOG.md\nindex 1a2b3c4..9d8e7f6 100644\n--- a/CHANGELOG.md\n+++ b/CHANGELOG.md\n@@ -1,3 +1,4 @@\n+## Unreleased\n+- Fix Safari login button unresponsive (WEB-1234)\n \n ## 0.9.0",
+ "git_diff": "diff --git a/README.md b/README.md\nindex 5c6d7e8..2a3b4c5 100644\n--- a/README.md\n+++ b/README.md\n@@ -10,6 +10,7 @@ Usage\n \n ## Configuration\n See config.yaml for options.\n+See VERSION.md for current release stage.",
+ "git_commit": "[main 4f9a2c1] Update changelog for WEB-1234 fix\n 1 file changed, 1 insertion(+)",
+ "git_add": "",
+ "git_reset": "Unstaged changes after reset:\nM\tCHANGELOG.md",
+ "git_log": "commit 4f9a2c1e8b7d6c5a4b3f2e1d0c9b8a7f6e5d4c3b\nAuthor: Nirvan Silswal <nirvan.silswal@gmail.com>\nDate:   Wed Sep 16 09:12:44 2026 -0700\n\n    Update changelog for WEB-1234 fix\n\ncommit 8b7e2d4f3a1c9b2d5e6f7a8b9c0d1e2f3a4b5c6d\nAuthor: Nirvan Silswal <nirvan.silswal@gmail.com>\nDate:   Tue Sep 15 16:03:21 2026 -0700\n\n    Bump version to beta",
+ "git_create_branch": "Created branch 'fix/web-1234-safari-login' from 'main' at 4f9a2c1",
+ "git_checkout": "Switched to branch 'fix/web-1234-safari-login'",
+ "git_show": "commit 4f9a2c1e8b7d6c5a4b3f2e1d0c9b8a7f6e5d4c3b\nAuthor: Nirvan Silswal <nirvan.silswal@gmail.com>\nDate:   Wed Sep 16 09:12:44 2026 -0700\n\n    Update changelog for WEB-1234 fix\n\ndiff --git a/CHANGELOG.md b/CHANGELOG.md\n@@ -1,3 +1,4 @@\n+## Unreleased\n+- Fix Safari login button unresponsive (WEB-1234)",
+ "git_branch": "* main\n  fix/web-1234-safari-login\n  refactor-invoice-parser"
+}

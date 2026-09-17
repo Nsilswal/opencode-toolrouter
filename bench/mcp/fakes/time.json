@@ -1,0 +1,4 @@
+{
+ "get_current_time": "{\"timezone\":\"America/Los_Angeles\",\"datetime\":\"2026-09-16T09:14:32-07:00\",\"is_dst\":true}",
+ "convert_time": "{\"source\":{\"timezone\":\"America/Los_Angeles\",\"datetime\":\"2026-09-16T09:14:32-07:00\"},\"target\":{\"timezone\":\"Asia/Kolkata\",\"datetime\":\"2026-09-16T21:44:32+05:30\"},\"time_difference\":\"+13:30\"}"
+}

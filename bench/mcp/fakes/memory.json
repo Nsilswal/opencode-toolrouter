@@ -1,0 +1,11 @@
+{
+ "create_entities": "{\"entities\":[{\"name\":\"WEB-1234\",\"entityType\":\"issue\",\"observations\":[\"Safari login button unresponsive\",\"status: To Do\",\"project: WEB\"]},{\"name\":\"Priya\",\"entityType\":\"person\",\"observations\":[\"Slack user U02PRIYA\",\"author of acme/api PR #482\"]}]}",
+ "create_relations": "{\"relations\":[{\"from\":\"Priya\",\"to\":\"PR #482\",\"relationType\":\"authored\"},{\"from\":\"PR #482\",\"to\":\"acme/api\",\"relationType\":\"targets\"}]}",
+ "add_observations": "{\"added\":[{\"entityName\":\"WEB-1234\",\"observations\":[\"reported affects Safari only\",\"linked to Sentry issue WEB-3F2\"]}]}",
+ "delete_entities": "{\"deleted\":[\"old_notes.txt\"]}",
+ "delete_observations": "{\"result\":\"observations removed\"}",
+ "delete_relations": "{\"result\":\"relations removed\"}",
+ "read_graph": "{\"entities\":[{\"name\":\"WEB-1234\",\"entityType\":\"issue\",\"observations\":[\"Safari login button unresponsive\",\"status: To Do\"]},{\"name\":\"Priya\",\"entityType\":\"person\",\"observations\":[\"Slack user U02PRIYA\"]},{\"name\":\"acme/api\",\"entityType\":\"repo\",\"observations\":[\"open PR #482 Refactor invoice parser\"]}],\"relations\":[{\"from\":\"Priya\",\"to\":\"PR #482\",\"relationType\":\"authored\"}]}",
+ "search_nodes": "{\"entities\":[{\"name\":\"WEB-1234\",\"entityType\":\"issue\",\"observations\":[\"Safari login button unresponsive\",\"status: To Do\"]}],\"relations\":[]}",
+ "open_nodes": "{\"entities\":[{\"name\":\"Priya\",\"entityType\":\"person\",\"observations\":[\"Slack user U02PRIYA\",\"author of acme/api PR #482\"]}],\"relations\":[{\"from\":\"Priya\",\"to\":\"PR #482\",\"relationType\":\"authored\"}]}"
+}

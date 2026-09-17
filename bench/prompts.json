@@ -1,0 +1,1028 @@
+[
+ {
+  "id": "gh1",
+  "kind": "direct",
+  "prompt": "Create a GitHub issue in acme/web titled 'Login button broken' saying the button does nothing on Safari.",
+  "gold": [
+   "github.create_issue"
+  ],
+  "must": [
+   [
+    "github.create_issue"
+   ]
+  ]
+ },
+ {
+  "id": "gh2",
+  "kind": "paraphrase",
+  "prompt": "Can you file a bug on our web repo (acme/web) that the login button is dead on Safari?",
+  "gold": [
+   "github.create_issue",
+   "atlassian.jira_create_issue",
+   "linear.linear_create_issue"
+  ],
+  "must": [
+   [
+    "github.create_issue",
+    "atlassian.jira_create_issue",
+    "linear.linear_create_issue"
+   ]
+  ]
+ },
+ {
+  "id": "gh3",
+  "kind": "direct",
+  "prompt": "List the open pull requests on acme/api.",
+  "gold": [
+   "github.list_pull_requests"
+  ],
+  "must": [
+   [
+    "github.list_pull_requests"
+   ]
+  ]
+ },
+ {
+  "id": "gh4",
+  "kind": "paraphrase",
+  "prompt": "What changed in PR #482 on acme/api? Show me the files it touches.",
+  "gold": [
+   "github.get_pull_request_files",
+   "github.get_pull_request"
+  ],
+  "must": [
+   [
+    "github.get_pull_request_files"
+   ]
+  ]
+ },
+ {
+  "id": "gh5",
+  "kind": "paraphrase",
+  "prompt": "Ship it: merge PR 482 in acme/api with a squash.",
+  "gold": [
+   "github.merge_pull_request"
+  ],
+  "must": [
+   [
+    "github.merge_pull_request"
+   ]
+  ]
+ },
+ {
+  "id": "gh6",
+  "kind": "paraphrase",
+  "prompt": "Find where we call parseInvoice across all of acme's repositories.",
+  "gold": [
+   "github.search_code"
+  ],
+  "must": [
+   [
+    "github.search_code"
+   ]
+  ]
+ },
+ {
+  "id": "gh7",
+  "kind": "paraphrase",
+  "prompt": "Leave a review on acme/api PR 482 approving it with the note 'nice cleanup'.",
+  "gold": [
+   "github.create_pull_request_review"
+  ],
+  "must": [
+   [
+    "github.create_pull_request_review"
+   ]
+  ]
+ },
+ {
+  "id": "gh8",
+  "kind": "paraphrase",
+  "prompt": "Is CI green on acme/api pull request 482?",
+  "gold": [
+   "github.get_pull_request_status"
+  ],
+  "must": [
+   [
+    "github.get_pull_request_status"
+   ]
+  ]
+ },
+ {
+  "id": "git1",
+  "kind": "paraphrase",
+  "prompt": "What files have I modified in the repo at /tmp/project but not staged yet?",
+  "gold": [
+   "git.git_status",
+   "git.git_diff_unstaged"
+  ],
+  "must": [
+   [
+    "git.git_status",
+    "git.git_diff_unstaged"
+   ]
+  ]
+ },
+ {
+  "id": "git2",
+  "kind": "direct",
+  "prompt": "Show the last 5 commits of the local repository at /tmp/project.",
+  "gold": [
+   "git.git_log"
+  ],
+  "must": [
+   [
+    "git.git_log"
+   ]
+  ]
+ },
+ {
+  "id": "git3",
+  "kind": "paraphrase",
+  "prompt": "Make a new local branch called fix/safari-login in /tmp/project.",
+  "gold": [
+   "git.git_create_branch"
+  ],
+  "must": [
+   [
+    "git.git_create_branch"
+   ]
+  ]
+ },
+ {
+  "id": "git4",
+  "kind": "paraphrase",
+  "prompt": "Unstage everything I added in /tmp/project.",
+  "gold": [
+   "git.git_reset"
+  ],
+  "must": [
+   [
+    "git.git_reset"
+   ]
+  ]
+ },
+ {
+  "id": "git5",
+  "kind": "ambiguous",
+  "prompt": "Show me what commit a1b2c3d changed in my checkout at /tmp/project.",
+  "gold": [
+   "git.git_show"
+  ],
+  "must": [
+   [
+    "git.git_show"
+   ]
+  ]
+ },
+ {
+  "id": "fs1",
+  "kind": "paraphrase",
+  "prompt": "Open /tmp/project/README.md and tell me what it says.",
+  "gold": [
+   "filesystem.read_text_file",
+   "filesystem.read_file"
+  ],
+  "must": [
+   [
+    "filesystem.read_text_file",
+    "filesystem.read_file"
+   ]
+  ]
+ },
+ {
+  "id": "fs2",
+  "kind": "paraphrase",
+  "prompt": "Give me an overview of the folder layout under /tmp/project.",
+  "gold": [
+   "filesystem.directory_tree",
+   "filesystem.list_directory",
+   "filesystem.list_directory_with_sizes"
+  ],
+  "must": [
+   [
+    "filesystem.directory_tree",
+    "filesystem.list_directory",
+    "filesystem.list_directory_with_sizes"
+   ]
+  ]
+ },
+ {
+  "id": "fs3",
+  "kind": "paraphrase",
+  "prompt": "Rename /tmp/project/old_notes.txt to /tmp/project/notes.txt.",
+  "gold": [
+   "filesystem.move_file"
+  ],
+  "must": [
+   [
+    "filesystem.move_file"
+   ]
+  ]
+ },
+ {
+  "id": "fs4",
+  "kind": "paraphrase",
+  "prompt": "Which files under /tmp/project have 'config' in their name?",
+  "gold": [
+   "filesystem.search_files"
+  ],
+  "must": [
+   [
+    "filesystem.search_files"
+   ]
+  ]
+ },
+ {
+  "id": "fs5",
+  "kind": "paraphrase",
+  "prompt": "Save the text 'TODO: fix login' to /tmp/project/todo.txt.",
+  "gold": [
+   "filesystem.write_file"
+  ],
+  "must": [
+   [
+    "filesystem.write_file"
+   ]
+  ]
+ },
+ {
+  "id": "fs6",
+  "kind": "paraphrase",
+  "prompt": "Replace the word 'beta' with 'stable' in /tmp/project/VERSION.md.",
+  "gold": [
+   "filesystem.edit_file",
+   "filesystem.read_text_file"
+  ],
+  "must": [
+   [
+    "filesystem.edit_file",
+    "filesystem.write_file"
+   ]
+  ]
+ },
+ {
+  "id": "web1",
+  "kind": "ambiguous",
+  "prompt": "Grab the contents of https://example.com/pricing and summarize it.",
+  "gold": [
+   "fetch.fetch",
+   "firecrawl.firecrawl_scrape",
+   "playwright.browser_navigate"
+  ],
+  "must": [
+   [
+    "fetch.fetch",
+    "firecrawl.firecrawl_scrape",
+    "playwright.browser_navigate"
+   ]
+  ]
+ },
+ {
+  "id": "web2",
+  "kind": "paraphrase",
+  "prompt": "Search the web for the latest Postgres 18 release notes.",
+  "gold": [
+   "brave-search.brave_web_search",
+   "firecrawl.firecrawl_search"
+  ],
+  "must": [
+   [
+    "brave-search.brave_web_search",
+    "firecrawl.firecrawl_search"
+   ]
+  ]
+ },
+ {
+  "id": "web3",
+  "kind": "paraphrase",
+  "prompt": "Find coffee shops near Union Square, San Francisco.",
+  "gold": [
+   "brave-search.brave_local_search"
+  ],
+  "must": [
+   [
+    "brave-search.brave_local_search"
+   ]
+  ]
+ },
+ {
+  "id": "web4",
+  "kind": "paraphrase",
+  "prompt": "Crawl every page of docs.example.com so we can index it.",
+  "gold": [
+   "firecrawl.firecrawl_crawl",
+   "firecrawl.firecrawl_map"
+  ],
+  "must": [
+   [
+    "firecrawl.firecrawl_crawl",
+    "firecrawl.firecrawl_map"
+   ]
+  ]
+ },
+ {
+  "id": "web5",
+  "kind": "paraphrase",
+  "prompt": "Pull the product name, price, and SKU from https://shop.example.com/item/42 as structured data.",
+  "gold": [
+   "firecrawl.firecrawl_extract",
+   "firecrawl.firecrawl_scrape"
+  ],
+  "must": [
+   [
+    "firecrawl.firecrawl_extract",
+    "firecrawl.firecrawl_scrape",
+    "fetch.fetch",
+    "playwright.browser_navigate"
+   ]
+  ]
+ },
+ {
+  "id": "web6",
+  "kind": "paraphrase",
+  "prompt": "Find recent papers on speculative decoding.",
+  "gold": [
+   "firecrawl.firecrawl_research_search_papers",
+   "brave-search.brave_web_search",
+   "firecrawl.firecrawl_search"
+  ],
+  "must": [
+   [
+    "firecrawl.firecrawl_research_search_papers",
+    "brave-search.brave_web_search",
+    "firecrawl.firecrawl_search"
+   ]
+  ]
+ },
+ {
+  "id": "pw1",
+  "kind": "paraphrase",
+  "prompt": "Open localhost:3000 in a browser and take a screenshot of the homepage.",
+  "gold": [
+   "playwright.browser_navigate"
+  ],
+  "must": [
+   [
+    "playwright.browser_take_screenshot"
+   ]
+  ]
+ },
+ {
+  "id": "pw2",
+  "kind": "paraphrase",
+  "prompt": "In the browser tab that's already open, click the 'Sign in' button.",
+  "gold": [
+   "playwright.browser_click",
+   "playwright.browser_snapshot",
+   "playwright.browser_find"
+  ],
+  "must": [
+   [
+    "playwright.browser_click"
+   ]
+  ]
+ },
+ {
+  "id": "pw3",
+  "kind": "paraphrase",
+  "prompt": "Check the JavaScript console of the open page for errors.",
+  "gold": [
+   "playwright.browser_console_messages"
+  ],
+  "must": [
+   [
+    "playwright.browser_console_messages"
+   ]
+  ]
+ },
+ {
+  "id": "pw4",
+  "kind": "paraphrase",
+  "prompt": "On the currently open signup page, fill in name 'Ada', email 'ada@example.com', and password 'hunter22'.",
+  "gold": [
+   "playwright.browser_fill_form",
+   "playwright.browser_type",
+   "playwright.browser_snapshot"
+  ],
+  "must": [
+   [
+    "playwright.browser_fill_form",
+    "playwright.browser_type"
+   ]
+  ]
+ },
+ {
+  "id": "pw5",
+  "kind": "paraphrase",
+  "prompt": "Which API calls did the open page make when it loaded?",
+  "gold": [
+   "playwright.browser_network_requests"
+  ],
+  "must": [
+   [
+    "playwright.browser_network_requests"
+   ]
+  ]
+ },
+ {
+  "id": "sl1",
+  "kind": "direct",
+  "prompt": "Post 'Deploy finished ✅' to the #releases Slack channel.",
+  "gold": [
+   "slack.slack_post_message",
+   "slack.slack_list_channels"
+  ],
+  "must": [
+   [
+    "slack.slack_post_message"
+   ]
+  ]
+ },
+ {
+  "id": "sl2",
+  "kind": "paraphrase",
+  "prompt": "What have people been saying in #incidents today?",
+  "gold": [
+   "slack.slack_get_channel_history",
+   "slack.slack_list_channels"
+  ],
+  "must": [
+   [
+    "slack.slack_get_channel_history",
+    "slack.slack_list_channels"
+   ]
+  ]
+ },
+ {
+  "id": "sl3",
+  "kind": "paraphrase",
+  "prompt": "Add a thumbs-up to the latest message in #general.",
+  "gold": [
+   "slack.slack_get_channel_history",
+   "slack.slack_add_reaction",
+   "slack.slack_list_channels"
+  ],
+  "must": [
+   [
+    "slack.slack_add_reaction"
+   ]
+  ]
+ },
+ {
+  "id": "sl4",
+  "kind": "paraphrase",
+  "prompt": "Who is on our chat workspace? List everyone.",
+  "gold": [
+   "slack.slack_get_users"
+  ],
+  "must": [
+   [
+    "slack.slack_get_users"
+   ]
+  ]
+ },
+ {
+  "id": "ji1",
+  "kind": "direct",
+  "prompt": "Create a Jira ticket in project WEB: 'Safari login button unresponsive'.",
+  "gold": [
+   "atlassian.jira_create_issue"
+  ],
+  "must": [
+   [
+    "atlassian.jira_create_issue"
+   ]
+  ]
+ },
+ {
+  "id": "ji2",
+  "kind": "paraphrase",
+  "prompt": "Move WEB-1234 to In Progress.",
+  "gold": [
+   "atlassian.jira_transition_issue",
+   "atlassian.jira_get_transitions"
+  ],
+  "must": [
+   [
+    "atlassian.jira_transition_issue"
+   ]
+  ]
+ },
+ {
+  "id": "ji3",
+  "kind": "paraphrase",
+  "prompt": "What's in the current sprint for the web team's board?",
+  "gold": [
+   "atlassian.jira_get_agile_boards",
+   "atlassian.jira_get_sprints_from_board",
+   "atlassian.jira_get_sprint_issues",
+   "atlassian.jira_get_board_issues"
+  ],
+  "must": [
+   [
+    "atlassian.jira_get_sprint_issues",
+    "atlassian.jira_get_board_issues"
+   ]
+  ]
+ },
+ {
+  "id": "ji4",
+  "kind": "paraphrase",
+  "prompt": "Log 2 hours of work on WEB-1234.",
+  "gold": [
+   "atlassian.jira_add_worklog"
+  ],
+  "must": [
+   [
+    "atlassian.jira_add_worklog"
+   ]
+  ]
+ },
+ {
+  "id": "ji5",
+  "kind": "paraphrase",
+  "prompt": "Assign WEB-1234 to Priya.",
+  "gold": [
+   "atlassian.jira_assign_issue",
+   "atlassian.jira_search_assignable_users",
+   "atlassian.jira_update_issue"
+  ],
+  "must": [
+   [
+    "atlassian.jira_assign_issue",
+    "atlassian.jira_update_issue"
+   ]
+  ]
+ },
+ {
+  "id": "ji6",
+  "kind": "paraphrase",
+  "prompt": "Find all unresolved bugs assigned to me in project WEB.",
+  "gold": [
+   "atlassian.jira_search"
+  ],
+  "must": [
+   [
+    "atlassian.jira_search"
+   ]
+  ]
+ },
+ {
+  "id": "ji7",
+  "kind": "paraphrase",
+  "prompt": "Is WEB-1234 going to breach its SLA?",
+  "gold": [
+   "atlassian.jira_get_issue_sla"
+  ],
+  "must": [
+   [
+    "atlassian.jira_get_issue_sla"
+   ]
+  ]
+ },
+ {
+  "id": "cf1",
+  "kind": "paraphrase",
+  "prompt": "Find our wiki page about the on-call runbook.",
+  "gold": [
+   "atlassian.confluence_search",
+   "notion.API-post-search"
+  ],
+  "must": [
+   [
+    "atlassian.confluence_search",
+    "notion.API-post-search"
+   ]
+  ]
+ },
+ {
+  "id": "cf2",
+  "kind": "direct",
+  "prompt": "Create a Confluence page in the ENG space titled 'Q3 Postmortem'.",
+  "gold": [
+   "atlassian.confluence_create_page"
+  ],
+  "must": [
+   [
+    "atlassian.confluence_create_page"
+   ]
+  ]
+ },
+ {
+  "id": "cf3",
+  "kind": "paraphrase",
+  "prompt": "What changed between the last two versions of Confluence page 98765?",
+  "gold": [
+   "atlassian.confluence_get_page_diff",
+   "atlassian.confluence_get_page_history"
+  ],
+  "must": [
+   [
+    "atlassian.confluence_get_page_diff",
+    "atlassian.confluence_get_page_history"
+   ]
+  ]
+ },
+ {
+  "id": "no1",
+  "kind": "direct",
+  "prompt": "Search Notion for our 2026 roadmap page.",
+  "gold": [
+   "notion.API-post-search"
+  ],
+  "must": [
+   [
+    "notion.API-post-search"
+   ]
+  ]
+ },
+ {
+  "id": "no2",
+  "kind": "paraphrase",
+  "prompt": "Add a new row to the Notion tasks database for 'Fix Safari login'.",
+  "gold": [
+   "notion.API-post-page",
+   "notion.API-post-search",
+   "notion.API-query-data-source",
+   "notion.API-retrieve-a-database"
+  ],
+  "must": [
+   [
+    "notion.API-post-page"
+   ]
+  ]
+ },
+ {
+  "id": "no3",
+  "kind": "paraphrase",
+  "prompt": "Get the full text of Notion page 1a2b3c as markdown.",
+  "gold": [
+   "notion.API-retrieve-page-markdown"
+  ],
+  "must": [
+   [
+    "notion.API-retrieve-page-markdown"
+   ]
+  ]
+ },
+ {
+  "id": "li1",
+  "kind": "direct",
+  "prompt": "Open a Linear issue for the Safari login bug on the Web team.",
+  "gold": [
+   "linear.linear_create_issue"
+  ],
+  "must": [
+   [
+    "linear.linear_create_issue"
+   ]
+  ]
+ },
+ {
+  "id": "li2",
+  "kind": "paraphrase",
+  "prompt": "What Linear tickets are assigned to me right now?",
+  "gold": [
+   "linear.linear_get_user_issues",
+   "linear.linear_search_issues"
+  ],
+  "must": [
+   [
+    "linear.linear_get_user_issues",
+    "linear.linear_search_issues"
+   ]
+  ]
+ },
+ {
+  "id": "se1",
+  "kind": "paraphrase",
+  "prompt": "What are the top unresolved errors in production for the web project in Sentry?",
+  "gold": [
+   "sentry.search_issues",
+   "sentry.find_organizations",
+   "sentry.find_projects"
+  ],
+  "must": [
+   [
+    "sentry.search_issues"
+   ]
+  ]
+ },
+ {
+  "id": "se2",
+  "kind": "paraphrase",
+  "prompt": "Figure out the root cause of Sentry issue WEB-3F2.",
+  "gold": [
+   "sentry.analyze_issue_with_seer",
+   "sentry.get_sentry_resource"
+  ],
+  "must": [
+   [
+    "sentry.analyze_issue_with_seer",
+    "sentry.get_sentry_resource"
+   ]
+  ]
+ },
+ {
+  "id": "se3",
+  "kind": "paraphrase",
+  "prompt": "Mark Sentry issue WEB-3F2 as resolved.",
+  "gold": [
+   "sentry.update_issue"
+  ],
+  "must": [
+   [
+    "sentry.update_issue"
+   ]
+  ]
+ },
+ {
+  "id": "sb1",
+  "kind": "paraphrase",
+  "prompt": "What tables exist in my Supabase project abcd1234?",
+  "gold": [
+   "supabase.list_tables"
+  ],
+  "must": [
+   [
+    "supabase.list_tables"
+   ]
+  ]
+ },
+ {
+  "id": "sb2",
+  "kind": "paraphrase",
+  "prompt": "Add a nullable 'avatar_url' text column to the profiles table in Supabase project abcd1234, as a tracked schema change.",
+  "gold": [
+   "supabase.apply_migration"
+  ],
+  "must": [
+   [
+    "supabase.apply_migration"
+   ]
+  ]
+ },
+ {
+  "id": "sb3",
+  "kind": "paraphrase",
+  "prompt": "Why are my Supabase edge functions failing? Check the logs for project abcd1234.",
+  "gold": [
+   "supabase.query_logs",
+   "supabase.get_advisors"
+  ],
+  "must": [
+   [
+    "supabase.query_logs",
+    "supabase.get_advisors"
+   ]
+  ]
+ },
+ {
+  "id": "sb4",
+  "kind": "paraphrase",
+  "prompt": "Generate TypeScript types for my Supabase database, project abcd1234.",
+  "gold": [
+   "supabase.generate_typescript_types"
+  ],
+  "must": [
+   [
+    "supabase.generate_typescript_types"
+   ]
+  ]
+ },
+ {
+  "id": "sb5",
+  "kind": "paraphrase",
+  "prompt": "Are there any security warnings on Supabase project abcd1234?",
+  "gold": [
+   "supabase.get_advisors"
+  ],
+  "must": [
+   [
+    "supabase.get_advisors"
+   ]
+  ]
+ },
+ {
+  "id": "pg1",
+  "kind": "ambiguous",
+  "prompt": "How many users signed up last week? Query the Postgres users table.",
+  "gold": [
+   "postgres.query",
+   "supabase.execute_sql"
+  ],
+  "must": [
+   [
+    "postgres.query",
+    "supabase.execute_sql"
+   ]
+  ]
+ },
+ {
+  "id": "c71",
+  "kind": "paraphrase",
+  "prompt": "Show me up-to-date docs for Next.js App Router data fetching.",
+  "gold": [
+   "context7.resolve-library-id",
+   "context7.query-docs"
+  ],
+  "must": [
+   [
+    "context7.query-docs"
+   ]
+  ]
+ },
+ {
+  "id": "c72",
+  "kind": "paraphrase",
+  "prompt": "How do I configure retries in the latest version of the tenacity Python library? Use current documentation.",
+  "gold": [
+   "context7.resolve-library-id",
+   "context7.query-docs"
+  ],
+  "must": [
+   [
+    "context7.query-docs"
+   ]
+  ]
+ },
+ {
+  "id": "tm1",
+  "kind": "paraphrase",
+  "prompt": "What time is it in Tokyo right now?",
+  "gold": [
+   "time.get_current_time"
+  ],
+  "must": [
+   [
+    "time.get_current_time"
+   ]
+  ]
+ },
+ {
+  "id": "tm2",
+  "kind": "paraphrase",
+  "prompt": "If it's 3pm in New York, what time is it in Berlin?",
+  "gold": [
+   "time.convert_time"
+  ],
+  "must": [
+   [
+    "time.convert_time"
+   ]
+  ]
+ },
+ {
+  "id": "me1",
+  "kind": "paraphrase",
+  "prompt": "Remember that Priya is the owner of the billing service.",
+  "gold": [
+   "memory.create_entities",
+   "memory.add_observations",
+   "memory.create_relations",
+   "memory.search_nodes"
+  ],
+  "must": [
+   [
+    "memory.create_entities",
+    "memory.add_observations",
+    "memory.create_relations"
+   ]
+  ]
+ },
+ {
+  "id": "me2",
+  "kind": "paraphrase",
+  "prompt": "What do you remember about the billing service?",
+  "gold": [
+   "memory.search_nodes",
+   "memory.open_nodes",
+   "memory.read_graph"
+  ],
+  "must": [
+   [
+    "memory.search_nodes",
+    "memory.open_nodes",
+    "memory.read_graph"
+   ]
+  ]
+ },
+ {
+  "id": "st1",
+  "kind": "paraphrase",
+  "prompt": "Think step by step through a migration plan for moving our monolith to services, revising as you go.",
+  "gold": [
+   "sequential-thinking.sequentialthinking"
+  ],
+  "must": [
+   [
+    "sequential-thinking.sequentialthinking"
+   ]
+  ]
+ },
+ {
+  "id": "mx1",
+  "kind": "multi",
+  "prompt": "Check Sentry for the newest crash in the web project and open a Jira ticket for it.",
+  "gold": [
+   "sentry.search_issues",
+   "sentry.find_projects",
+   "sentry.find_organizations"
+  ],
+  "must": [
+   [
+    "sentry.search_issues"
+   ],
+   [
+    "atlassian.jira_create_issue"
+   ]
+  ]
+ },
+ {
+  "id": "mx2",
+  "kind": "multi",
+  "prompt": "Summarize open PRs on acme/api and post the summary to #eng in Slack.",
+  "gold": [
+   "github.list_pull_requests"
+  ],
+  "must": [
+   [
+    "github.list_pull_requests"
+   ],
+   [
+    "slack.slack_post_message"
+   ]
+  ]
+ },
+ {
+  "id": "mx3",
+  "kind": "multi",
+  "prompt": "Read /tmp/project/CHANGELOG.md and publish it as a new Confluence page in ENG.",
+  "gold": [
+   "filesystem.read_text_file",
+   "filesystem.read_file"
+  ],
+  "must": [
+   [
+    "filesystem.read_text_file",
+    "filesystem.read_file"
+   ],
+   [
+    "atlassian.confluence_create_page"
+   ]
+  ]
+ },
+ {
+  "id": "mx4",
+  "kind": "multi",
+  "prompt": "Commit my staged changes in /tmp/project with message 'fix safari login', then open a PR on acme/web.",
+  "gold": [
+   "git.git_commit",
+   "git.git_status",
+   "git.git_diff_staged"
+  ],
+  "must": [
+   [
+    "git.git_commit"
+   ],
+   [
+    "github.create_pull_request"
+   ]
+  ]
+ },
+ {
+  "id": "mx5",
+  "kind": "multi",
+  "prompt": "Scrape https://status.example.com and if anything is degraded, post it in #incidents.",
+  "gold": [
+   "fetch.fetch",
+   "firecrawl.firecrawl_scrape",
+   "playwright.browser_navigate"
+  ],
+  "must": [
+   [
+    "fetch.fetch",
+    "firecrawl.firecrawl_scrape",
+    "playwright.browser_navigate"
+   ],
+   [
+    "slack.slack_post_message"
+   ]
+  ]
+ },
+ {
+  "id": "nt1",
+  "kind": "none",
+  "prompt": "What's the difference between a mutex and a semaphore? Answer briefly.",
+  "gold": [],
+  "must": []
+ },
+ {
+  "id": "nt2",
+  "kind": "none",
+  "prompt": "Write a one-line Python list comprehension that squares the even numbers in xs.",
+  "gold": [],
+  "must": []
+ }
+]

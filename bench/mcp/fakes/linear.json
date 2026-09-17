@@ -1,0 +1,7 @@
+{
+ "linear_create_issue": "{\"id\":\"a1b2c3d4-1111-2222-3333-444455556666\",\"identifier\":\"WEB-1241\",\"title\":\"Investigate intermittent Safari login failures\",\"url\":\"https://linear.app/acme/issue/WEB-1241/investigate-intermittent-safari-login-failures\",\"state\":\"Backlog\",\"team\":\"Web\"}",
+ "linear_update_issue": "{\"identifier\":\"WEB-1234\",\"title\":\"Safari login button unresponsive\",\"state\":\"In Progress\",\"url\":\"https://linear.app/acme/issue/WEB-1234/safari-login-button-unresponsive\"}",
+ "linear_search_issues": "{\"issues\":[{\"identifier\":\"WEB-1234\",\"title\":\"Safari login button unresponsive\",\"state\":\"To Do\",\"priority\":2,\"assignee\":\"Sam\",\"url\":\"https://linear.app/acme/issue/WEB-1234\"}],\"total\":1}",
+ "linear_get_user_issues": "{\"user\":\"Priya\",\"issues\":[{\"identifier\":\"WEB-1231\",\"title\":\"Update invoice parser error messages\",\"state\":\"In Progress\",\"priority\":3,\"updatedAt\":\"2026-09-15T14:22:00Z\"},{\"identifier\":\"WEB-1198\",\"title\":\"Add pagination to orders table\",\"state\":\"Backlog\",\"priority\":4,\"updatedAt\":\"2026-09-10T09:03:00Z\"}]}",
+ "linear_add_comment": "{\"id\":\"cmt_88a2f1\",\"issue\":\"WEB-1234\",\"body\":\"Repro'd on Safari 17 macOS Sonoma \u2014 button click handler not firing, likely event listener attached before hydration.\",\"user\":\"Sam\",\"url\":\"https://linear.app/acme/issue/WEB-1234#comment-88a2f1\",\"createdAt\":\"2026-09-16T10:12:00Z\"}"
+}
