@@ -24,6 +24,8 @@ other Jira tools but not `jira_get_issue_sla`; `find_tools` exists for that case
 The mock model answers immediately instead of using tools, so these numbers measure what reaches the
 model, not task success. Task quality with a real model is not measured yet.
 
+See [docs/cost-report.md](docs/cost-report.md) for what this saves in money, including how prompt caching changes it.
+
 ## Install
 
 ```bash
