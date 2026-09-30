@@ -2,6 +2,7 @@
   "name": "opencode-toolrouter",
   "version": "0.1.0",
   "description": "opencode plugin: load only the MCP tools each request needs, picked by TypeSafe's Jev.",
+  "license": "MIT",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
